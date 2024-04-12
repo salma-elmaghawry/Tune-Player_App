@@ -1,11 +1,12 @@
-import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter/material.dart';
 
 class ItemModel {
   final Color color;
   final String sound;
   const ItemModel({required this.color, required this.sound});
-  void playSound() {
+
+  playSound() {
     final player = AudioPlayer();
     player.play(AssetSource(sound));
   }

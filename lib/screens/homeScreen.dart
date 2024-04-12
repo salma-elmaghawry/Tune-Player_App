@@ -19,7 +19,7 @@ class homeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tune Player '),
+        title: const Text('Tunes Player App'),
         elevation: 0,
         backgroundColor: const Color(0xff26313A),
         centerTitle: true,
