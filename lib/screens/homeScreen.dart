@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:tune_player_app/components/item.dart';
+import 'package:tune_player_app/models/itemModel.dart';
+
 
 class homeScreen extends StatelessWidget {
   const homeScreen({super.key});
-  final List<Color> itemsColors = const [
-    Color(0xffEF476F),
-    Color(0xffcdb4db),
-    Color(0xffffc8dd),
-    Color(0xffbde0fe),
-    Color(0xffFFD166),
-    Color(0xffffafcc),
-    Color(0xffa2d2ff),
+  final List<ItemModel> tunes = const [
+    ItemModel(color:Color(0xffEF476F) , sound: "note1.wav"),
+    ItemModel(color:Color(0xffcdb4db) , sound: "note2.wav"),
+    ItemModel(color:Color(0xffffc8dd) , sound: "note3.wav"),
+    ItemModel(color:Color(0xffbde0fe) , sound: "note4.wav"),
+    ItemModel(color:Color(0xffFFD166) , sound: "note5.wav"),
+    ItemModel(color:Color(0xffffafcc) , sound: "note6.wav"),
+    ItemModel(color:Color(0xffa2d2ff) , sound: "note7.wav")
   ];
 
   @override
@@ -23,21 +25,14 @@ class homeScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: Column(
-        children: itemsColors
+        children: tunes
             .map(
-              (color) => Item(color: color),
+              (e) => Item(tune: e),
             )
             .toList(),
       ),
     );
   }
 
-  List<Item> getTuneItem() {
-    List<Item> items = [];
-    for (var color in itemsColors) {
-      items.add(Item(color: color));
-    }
-
-    return items;
-  }
+  
 }
