@@ -6,13 +6,19 @@ import 'package:tune_player_app/models/itemModel.dart';
 class homeScreen extends StatelessWidget {
   const homeScreen({super.key});
   final List<ItemModel> tunes = const [
-    ItemModel(color:Color(0xffEF476F) , sound: "note1.wav"),
-    ItemModel(color:Color(0xffcdb4db) , sound: "note2.wav"),
-    ItemModel(color:Color(0xffffc8dd) , sound: "note3.wav"),
-    ItemModel(color:Color(0xffbde0fe) , sound: "note4.wav"),
-    ItemModel(color:Color(0xffFFD166) , sound: "note5.wav"),
-    ItemModel(color:Color(0xffffafcc) , sound: "note6.wav"),
-    ItemModel(color:Color(0xffa2d2ff) , sound: "note7.wav")
+    ItemModel(color:Colors.black , sound: "note1.wav"),
+    ItemModel(color:Colors.white , sound: "note2.wav"),
+    ItemModel(color:Colors.black , sound: "note3.wav"),
+    ItemModel(color:Colors.white , sound: "note4.wav"),
+    ItemModel(color:Colors.black , sound: "note5.wav"),
+    ItemModel(color:Colors.white , sound: "note6.wav"),
+    ItemModel(color:Colors.black , sound: "note7.wav"),
+    ItemModel(color:Colors.white , sound: "note2.wav"),
+    ItemModel(color:Colors.black , sound: "note3.wav"),
+    ItemModel(color:Colors.white , sound: "note4.wav"),
+    ItemModel(color:Colors.black , sound: "note5.wav"),
+    
+
   ];
 
   @override
@@ -21,7 +27,7 @@ class homeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Tunes Player App'),
         elevation: 0,
-        backgroundColor: const Color(0xff26313A),
+        backgroundColor: const Color(0xffbde0fe),
         centerTitle: true,
       ),
       body: Column(
